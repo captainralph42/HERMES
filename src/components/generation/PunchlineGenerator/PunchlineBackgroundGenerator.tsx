@@ -18,7 +18,7 @@ const PunchlineBackgroundGenerator: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<string>('');
   const [uuid, setUuid] = useState<string>('');
 
-  const collectionId = '24MqNmyr4hQoHx8gWpz6Z9TNGYDvJNBbUprkjuziBkTKD';
+  const collectionId = process.env.NEXT_PUBLIC_COLLECTION_ID || '';
 
   useEffect(() => {
     setUuid(uuidv4()); 

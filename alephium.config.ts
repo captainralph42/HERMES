@@ -19,7 +19,7 @@ const configuration: Configuration<Settings> = {
     testnet: {
       nodeUrl: process.env.NODE_URL as string ?? 'https://node.testnet.alephium.org',
       privateKeys: process.env.PRIVATE_KEYS === undefined ? [] : process.env.PRIVATE_KEYS.split(','),
-      settings: { oracleAddress: 'vKdWgyqtQZzAV7eoMXxQCkyiNtceViGZheXC1iHbKFDZ' } // DIA oracle address on testnet
+      settings: { oracleAddress: 'vKdWgyqtQZzAV7eoMXxQCkyiNtceViGZheXC1iHbKFDZ' }
     },
 
     mainnet: {
