@@ -5,7 +5,7 @@ export const uploadImageToPinata = async (file: File) => {
   const data = new FormData();
   data.append('file', file);
 
-  console.log('Fichier à uploader sur Pinata:', file);
+  console.log('File to upload to Pinata:', file);
 
   const response = await fetch('https://api.pinata.cloud/pinning/pinFileToIPFS', {
     method: 'POST',
@@ -17,12 +17,12 @@ export const uploadImageToPinata = async (file: File) => {
   });
 
   if (!response.ok) {
-    const errorMessage = await response.text();  // Obtenir plus de détails sur l'erreur
+    const errorMessage = await response.text();
     throw new Error(`Pinata image upload failed: ${errorMessage}`);
   }
 
   const result = await response.json();
-  return result.IpfsHash;  // URI IPFS de l'image
+  return result.IpfsHash;
 };
 
 export const uploadJsonToPinata = async (metadata: object) => {
@@ -37,10 +37,10 @@ export const uploadJsonToPinata = async (metadata: object) => {
   });
 
   if (!response.ok) {
-    const errorMessage = await response.text();  // Obtenir plus de détails sur l'erreur
+    const errorMessage = await response.text();
     throw new Error(`Pinata JSON upload failed: ${errorMessage}`);
   }
 
   const result = await response.json();
-  return result.IpfsHash;  // URI IPFS du fichier JSON
+  return result.IpfsHash;
 };

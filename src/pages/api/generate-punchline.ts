@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { alphPrice, btcPrice } = await fetchPrices();
       console.log("Fetched prices:", { alphPrice, btcPrice });
 
-      const punchline = await generatePunchline(humor, love, subtlety, length, alphPrice ?? 1.5, btcPrice ?? 30000);
+      const punchline = await generatePunchline(humor, love, subtlety, length, alphPrice ?? 1.6, btcPrice ?? 60000);
       console.log("Generated punchline:", punchline);
 
       res.status(200).json({ punchline });

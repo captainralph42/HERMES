@@ -5,7 +5,7 @@ import fs from 'fs';
 const fontPath = path.join(process.cwd(), 'src/fonts/Holyfat.ttf');
 
 if (!fs.existsSync(fontPath)) {
-  console.error('Erreur: Le fichier de police n\'existe pas:', fontPath);
+  console.error('Error: Font file does not exist:', fontPath);
   process.exit(1);
 }
 
@@ -17,9 +17,9 @@ const loadImageFromUrl = async (url: string): Promise<any> => {
     return image;
   } catch (error) {
     if (error instanceof Error) {
-      throw new Error(`Erreur lors du chargement de l'image: ${error.message}`);
+      throw new Error(`Error loading image: ${error.message}`);
     } else {
-      throw new Error('Erreur inconnue lors du chargement de l\'image');
+      throw new Error('Unknown error loading image');
     }
   }
 };
@@ -81,7 +81,7 @@ export const mergePunchlineAndBackground = async (punchline: string, backgroundU
 
     return canvas.toDataURL('image/png');
   } catch (error) {
-    console.error('Erreur lors de la fusion de la punchline et du background:', error);
+    console.error('Error merging punchline and background:', error);
     throw error;
   }
 };

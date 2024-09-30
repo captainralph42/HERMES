@@ -12,7 +12,7 @@ export async function generatePunchline(
     subtletyValue: number, 
     lengthValue: number, 
     alphPrice: number | null,  
-    btcPrice: number
+    btcPrice: number | null
 ): Promise<string> {
     try {
         let humor = ''; 
