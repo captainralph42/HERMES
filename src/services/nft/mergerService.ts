@@ -40,7 +40,7 @@ export const mergePunchlineAndBackground = async (punchline: string, backgroundU
 
     const wrapText = (context: CanvasRenderingContext2D, text: string, maxWidth: number) => {
       const words = text.split(' ');
-      let lines: string[] = [];
+      const lines: string[] = [];
       let currentLine = words[0];
 
       for (let i = 1; i < words.length; i++) {
