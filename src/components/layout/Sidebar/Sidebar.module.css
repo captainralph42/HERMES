@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4E4E4E; /* Gris anthracite */
+  background-color: #4E4E4E;
   padding: 0 20px;
   margin: 10px 20px;
-  color: #A8D5BA; /* Beige clair pour le texte */
+  color: #A8D5BA;
   height: 50px;
   border: 2px solid #444;
   border-radius: 30px;
@@ -32,7 +32,7 @@
 .brandName {
   margin-left: 10px;
   font-weight: 100;
-  color: #A8D5BA; /* Vert pastel pour la marque */
+  color: #A8D5BA; 
 }
 
 .nav {
@@ -43,7 +43,7 @@
 }
 
 .navItem {
-  color: #A8D5BA; /* Beige clair pour les liens */
+  color: #A8D5BA;
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: inherit;
@@ -52,5 +52,5 @@
 }
 
 .navItem:hover {
-  color: #6b9b7e; /* Vert pastel au survol pour correspondre au logo */
+  color: #6b9b7e;
 }

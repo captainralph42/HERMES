@@ -1,4 +1,3 @@
-// src/components/MintedNFTDisplay.tsx
 import React from 'react';
 import styles from './MintedNFTDisplay.module.css';
 

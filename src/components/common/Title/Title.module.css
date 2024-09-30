@@ -1,5 +1,5 @@
 .titleBox {
-  background-color: #4E4E4E; /* Rose pastel */
+  background-color: #4E4E4E;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -10,7 +10,7 @@
 
 .title {
   font-family: 'Holyfat', sans-serif;
-  color: #A8D5BA; /* Vert pastel pour le texte */
+  color: #A8D5BA;
   font-size: 3rem;
   font-weight: 100;
   margin: 0;

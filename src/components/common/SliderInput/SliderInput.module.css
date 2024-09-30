@@ -27,7 +27,7 @@
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #A8D5BA; /* Vert pastel pour le curseur */
+    background: #A8D5BA;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -37,7 +37,7 @@
   .sliderInput::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #A8D5BA; /* Vert pastel */
+    background: #A8D5BA;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

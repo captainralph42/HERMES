@@ -8,24 +8,22 @@ interface GenerateButtonProps {
 }
 
 const GenerateButton: React.FC<GenerateButtonProps> = ({ onClick, isLoading }) => {
-  const { account } = useWallet(); // Utiliser useWallet pour obtenir l'état du compte
-  const [isMounted, setIsMounted] = useState(false); // État pour vérifier si le composant est monté côté client
+  const { account } = useWallet();
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Définir l'état monté à true après le rendu côté client
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  const isConnected = !!account; // Si account est défini, l'utilisateur est connecté
+  const isConnected = !!account;
 
   return (
     <button
       onClick={onClick}
-      disabled={isLoading || !isConnected} // Désactiver si en cours de mint ou si le wallet n'est pas connecté
+      disabled={isLoading || !isConnected}
       className={styles.generateButton}
     >
       {isLoading ? 'Minting...' : isMounted ? (isConnected ? 'Mint' : 'Connect Wallet to Mint') : 'Mint'}
-      {/* Afficher 'Mint' par défaut avant que le composant soit monté côté client */}
     </button>
   );
 };

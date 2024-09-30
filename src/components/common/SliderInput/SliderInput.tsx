@@ -10,7 +10,7 @@ interface SliderInputProps {
 const SliderInput: React.FC<SliderInputProps> = ({ label, value, onChange }) => {
   return (
     <div className={styles.sliderContainer}>
-      <label className={styles.sliderLabel}> {/* Applique la classe pour centrer */}
+      <label className={styles.sliderLabel}>
         {label}
       </label>
       <input

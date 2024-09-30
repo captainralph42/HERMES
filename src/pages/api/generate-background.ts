@@ -6,18 +6,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       console.log("Received request to generate background");
 
-      // Appelle le service pour générer le background
       const background = await generateBackgroundImage();
       console.log("Generated background:", background);
 
-      // Envoyer le background généré au client
       res.status(200).json({ background });
     } catch (error) {
-      console.error("Erreur lors de la génération du background:", error);
-      res.status(500).json({ error: 'Erreur lors de la génération du background.' });
+      console.error("Error generating background:", error);
+      res.status(500).json({ error: 'Error generating background.' });
     }
   } else {
-    console.warn("Méthode non autorisée:", req.method);
-    res.status(405).json({ message: 'Méthode non autorisée' });
+    console.warn("Method not allowed:", req.method);
+    res.status(405).json({ message: 'Method not allowed' });
   }
 }

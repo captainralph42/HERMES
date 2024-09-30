@@ -1,6 +1,6 @@
 .generateButton {
-    background-color: #A8D5BA; /* Vert pastel */
-    color: #2D2D2D; /* Gris foncé pour le texte */
+    background-color: #A8D5BA;
+    color: #2D2D2D;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     padding: 10px 20px;
@@ -9,25 +9,25 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Prend toute la largeur du container */
-    max-width: 200px; /* Largeur maximale */
-    margin: 0 auto; /* Centre le bouton */
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
 .generateButton:hover {
-    background-color: #E4A8B9; /* Passe au rose pastel au survol */
-    color: #fff; /* Texte blanc au survol */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Accentue l'ombre */
-    transform: scale(1.05); /* Effet de grossissement au survol */
+    background-color: #E4A8B9;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .generateButton:active {
-    transform: scale(0.95); /* Réduction légère lors du clic */
+    transform: scale(0.95);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .generateButton:disabled {
-    background-color: #cccccc; /* Couleur désactivée */
+    background-color: #cccccc;
     color: #666666;
-    cursor: not-allowed; /* Change le curseur lorsque désactivé */
+    cursor: not-allowed;
 }
