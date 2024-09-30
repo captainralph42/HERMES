@@ -5,8 +5,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     const { punchline, background } = req.body;
 
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000';
+
+    const watermarkUrl = `${baseUrl}/images/hermes_alephium_logo.png`;
+
     try {
-      const mergedImage = await mergePunchlineAndBackground(punchline, background);
+      const mergedImage = await mergePunchlineAndBackground(punchline, background, watermarkUrl);
       res.status(200).json({ mergedImage });
     } catch (error) {
       console.error("Error merging punchline and background:", error);

@@ -24,9 +24,14 @@ const loadImageFromUrl = async (url: string): Promise<any> => {
   }
 };
 
-export const mergePunchlineAndBackground = async (punchline: string, backgroundUrl: string): Promise<string> => {
+export const mergePunchlineAndBackground = async (
+  punchline: string,
+  backgroundUrl: string,
+  watermarkUrl: string
+): Promise<string> => {
   try {
     const backgroundImage = await loadImageFromUrl(backgroundUrl);
+    const watermark = await loadImageFromUrl(watermarkUrl);
 
     const canvas = createCanvas(1080, 1080);
     const ctx = canvas.getContext('2d') as unknown as CanvasRenderingContext2D;
@@ -66,9 +71,6 @@ export const mergePunchlineAndBackground = async (punchline: string, backgroundU
     lines.forEach((line, index) => {
       ctx.fillText(line, textX, textY + index * lineHeight);
     });
-
-    const logoUrl = '/images/hermes_alephium_logo.png';
-    const watermark = await loadImage(`http://localhost:3000${logoUrl}`);
 
     const watermarkWidth = canvas.width * 0.15;
     const aspectRatio = watermark.height / watermark.width;
