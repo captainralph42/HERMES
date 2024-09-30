@@ -1,0 +1,42 @@
+.controlPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #4E4E4E;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #A8D5BA;
+  height: 100%; /* Prend toute la hauteur disponible */
+  min-height: 300px;
+  max-height: 600px; /* Limite la hauteur pour éviter l'expansion infinie */
+  box-sizing: border-box; /* Inclut le padding dans la taille totale */
+}
+
+.controlPanel > * {
+  flex: 1; /* Divise l'espace disponible de manière égale */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0; /* Empêche la flexbox de surcroître au-delà de la hauteur disponible */
+}
+
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .controlPanel {
+    height: auto; /* Ajuste la hauteur automatiquement sur mobile */
+  }
+
+  .generateButton {
+    max-width: 150px; /* Réduit la taille du bouton sur les petits écrans */
+  }
+}

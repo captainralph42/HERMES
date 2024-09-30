@@ -4,25 +4,55 @@
 
 import { RunScriptResult, DeployContractExecutionResult } from "@alephium/cli";
 import { NetworkId } from "@alephium/web3";
-import { TokenFaucet, TokenFaucetInstance } from ".";
-import { default as testnetDeployments } from "../.deployments.testnet.json";
-import { default as devnetDeployments } from "../.deployments.devnet.json";
+import {
+  PriceFetcher,
+  PriceFetcherInstance,
+  HermesNFT,
+  HermesNFTInstance,
+  HermesCollectionNFT,
+  HermesCollectionNFTInstance,
+} from ".";
+import { default as testnetDeployments } from "../../deployments/.deployments.testnet.json";
+import { default as devnetDeployments } from "../../deployments/.deployments.devnet.json";
 
 export type Deployments = {
   deployerAddress: string;
   contracts: {
-    TokenFaucet: DeployContractExecutionResult<TokenFaucetInstance>;
+    PriceFetcher?: DeployContractExecutionResult<PriceFetcherInstance>;
+    HermesNFT?: DeployContractExecutionResult<HermesNFTInstance>;
+    HermesCollectionNFT?: DeployContractExecutionResult<HermesCollectionNFTInstance>;
   };
 };
 
 function toDeployments(json: any): Deployments {
   const contracts = {
-    TokenFaucet: {
-      ...json.contracts["TokenFaucet"],
-      contractInstance: TokenFaucet.at(
-        json.contracts["TokenFaucet"].contractInstance.address
-      ),
-    },
+    PriceFetcher:
+      json.contracts["PriceFetcher"] === undefined
+        ? undefined
+        : {
+            ...json.contracts["PriceFetcher"],
+            contractInstance: PriceFetcher.at(
+              json.contracts["PriceFetcher"].contractInstance.address
+            ),
+          },
+    HermesNFT:
+      json.contracts["HermesNFT"] === undefined
+        ? undefined
+        : {
+            ...json.contracts["HermesNFT"],
+            contractInstance: HermesNFT.at(
+              json.contracts["HermesNFT"].contractInstance.address
+            ),
+          },
+    HermesCollectionNFT:
+      json.contracts["HermesCollectionNFT"] === undefined
+        ? undefined
+        : {
+            ...json.contracts["HermesCollectionNFT"],
+            contractInstance: HermesCollectionNFT.at(
+              json.contracts["HermesCollectionNFT"].contractInstance.address
+            ),
+          },
   };
   return {
     ...json,
@@ -43,7 +73,7 @@ export function loadDeployments(
   if (deployments === undefined) {
     throw Error("The contract has not been deployed to the " + networkId);
   }
-  const allDeployments = Array.isArray(deployments)
+  const allDeployments: any[] = Array.isArray(deployments)
     ? deployments
     : [deployments];
   if (deployerAddress === undefined) {

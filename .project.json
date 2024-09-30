@@ -1,5 +1,5 @@
 {
-  "fullNodeVersion": "v3.5.0",
+  "fullNodeVersion": "v3.6.4",
   "compilerOptionsUsed": {
     "ignoreUnusedConstantsWarnings": false,
     "ignoreUnusedVariablesWarnings": false,
@@ -10,23 +10,47 @@
     "ignoreUnusedFunctionReturnWarnings": false
   },
   "infos": {
-    "IFungibleToken": {
-      "sourceFile": "../node_modules/@alephium/web3/std/fungible_token_interface.ral",
-      "sourceCodeHash": "62910bf11e1eeb6cb2fd468626ff606a9b06306b2b81590c3b10f6deb5966bde",
+    "DIAOracleValue": {
+      "sourceFile": "price_fetcher.ral",
+      "sourceCodeHash": "2cad1fd7f05b1352bb6de0250579ab0f80822792e14ce5107f282fa5e187bc6c",
       "bytecodeDebugPatch": "",
       "codeHashDebug": ""
     },
-    "TokenFaucet": {
-      "sourceFile": "token.ral",
-      "sourceCodeHash": "3a12c7604f3899bde03ab81e81eac394a53e723c6e99bc38aeb722689826759f",
-      "bytecodeDebugPatch": "=20-2+67=101+3a0007e02=1+75468652063757272656e742062616c616e63652069732000=46",
-      "codeHashDebug": "a3309aa3a0dbd0c53b67a0c422316dcbc0571d8fa5f9ea2ab374b5c110f4efe2"
+    "HermesCollectionNFT": {
+      "sourceFile": "hermes_collection_NFT.ral",
+      "sourceCodeHash": "bc629c79ee9403f664335b21f5e69440e6d3aaa486f10f7234f5f0272fcf1c77",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "86f278d2de249eca00d0c68f12167da0c1a54c02eaa8c148f89e659ae7cf11af"
     },
-    "Withdraw": {
-      "sourceFile": "withdraw.ral",
-      "sourceCodeHash": "52423580f02f5aab7050bfb9a14b497ea4bdcb10b3444483650f3dad8e0e5330",
+    "HermesNFT": {
+      "sourceFile": "hermesNFT.ral",
+      "sourceCodeHash": "1381e9e326c77da9e37efafdae220951beb2ca94dbc5fde4873ff6abd9cd0fbc",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "4897086210869e612d82995b765a447c5319a55a56e8a0c3c07b4d9ca81e15b1"
+    },
+    "IDIAOracle": {
+      "sourceFile": "price_fetcher.ral",
+      "sourceCodeHash": "2cad1fd7f05b1352bb6de0250579ab0f80822792e14ce5107f282fa5e187bc6c",
       "bytecodeDebugPatch": "",
       "codeHashDebug": ""
+    },
+    "INFT": {
+      "sourceFile": "..\\node_modules\\@alephium\\web3\\std\\nft_interface.ral",
+      "sourceCodeHash": "92956f4e61c198f011b48dbda2ed76193ffc79ac9c39f60bf1763a34e02f2c41",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "INFTCollection": {
+      "sourceFile": "..\\node_modules\\@alephium\\web3\\std\\nft_collection_interface.ral",
+      "sourceCodeHash": "9b199426ea89c188ce858b48ab809f13b9fc1ed0d64ca91e3d600eda8fbf6c42",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "PriceFetcher": {
+      "sourceFile": "price_fetcher.ral",
+      "sourceCodeHash": "2cad1fd7f05b1352bb6de0250579ab0f80822792e14ce5107f282fa5e187bc6c",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "234c356f92e0e441323a14f31234857df46285aba20dc9423bccba90b0f3714e"
     }
   }
 }

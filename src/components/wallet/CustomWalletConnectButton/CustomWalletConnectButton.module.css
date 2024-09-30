@@ -1,0 +1,67 @@
+.customButton {
+  font-size: 21px; 
+  height: 2.5rem; 
+  padding: 0 1rem; 
+  background-color: #333;
+  color: #A8D5BA;
+  border: none;
+  border-radius: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'Holyfat', sans-serif;
+  font-weight: 100;
+  position: relative;
+  overflow: hidden; 
+}
+
+.text {
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hoverText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hovered .text {
+  opacity: 0;
+}
+
+.hovered .hoverText {
+  opacity: 1;
+}
+
+.customButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.hovered::before {
+  transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+  .customButton {
+    height: 2rem;
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+  }
+}

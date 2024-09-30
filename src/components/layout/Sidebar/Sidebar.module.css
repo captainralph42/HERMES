@@ -1,0 +1,56 @@
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4E4E4E; /* Gris anthracite */
+  padding: 0 20px;
+  margin: 10px 20px;
+  color: #A8D5BA; /* Beige clair pour le texte */
+  height: 50px;
+  border: 2px solid #444;
+  border-radius: 30px;
+  font-family: 'Holyfat', sans-serif;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logoImage {
+  height: 30px;
+}
+
+.brandName {
+  margin-left: 10px;
+  font-weight: 100;
+  color: #A8D5BA; /* Vert pastel pour la marque */
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.navItem {
+  color: #A8D5BA; /* Beige clair pour les liens */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.navItem:hover {
+  color: #6b9b7e; /* Vert pastel au survol pour correspondre au logo */
+}

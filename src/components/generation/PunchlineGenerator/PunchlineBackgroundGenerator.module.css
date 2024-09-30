@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #4E4E4E; /* Gris anthracite pour le fond */
+  border-radius: 10px;
+}
+
+.layout {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.nftDisplay, .controlPanel {
+  flex: 1;
+  height: 100%;
+}

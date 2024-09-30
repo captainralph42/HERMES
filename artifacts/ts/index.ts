@@ -2,5 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export * from "./TokenFaucet";
+export * from "./HermesCollectionNFT";
+export * from "./HermesNFT";
+export * from "./PriceFetcher";
 export * from "./scripts";
