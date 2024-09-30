@@ -2,7 +2,7 @@ export const generateBackgroundImage = async (): Promise<string | null> => {
     const prompt = "Abstract patterns spread across the entire background, warm beige and pink tones, dark colors, smooth design, flowing lines, subtle glowing effects, no central focus, suitable for overlaying text";
     const width = 1024;
     const height = 1024;
-    const seed = Math.floor(Math.random() * 10000); // Générer une graine aléatoire
+    const seed = Math.floor(Math.random() * 10000);
     const model = 'flux';
     const nologo = 'true'; 
     
@@ -12,12 +12,12 @@ export const generateBackgroundImage = async (): Promise<string | null> => {
       const response = await fetch(apiUrl);
   
       if (!response.ok) {
-        throw new Error('Erreur lors de la récupération de l\'image');
+        throw new Error('Error while retrieving the image');
       }
   
-      return apiUrl; // Retourner l'URL de l'image générée
+      return apiUrl;
     } catch (error) {
-      console.error('Erreur dans generateBackgroundImage:', error);
+      console.error('Error in generateBackgroundImage:', error);
       return null;
     }
   };
