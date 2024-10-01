@@ -30,8 +30,16 @@ export const mergePunchlineAndBackground = async (
   watermarkUrl: string
 ): Promise<string> => {
   try {
+    console.log("Starting to merge punchline and background");
+    console.log("Punchline:", punchline);
+    console.log("Background URL:", backgroundUrl);
+    console.log("Watermark URL:", watermarkUrl);
+
     const backgroundImage = await loadImageFromUrl(backgroundUrl);
+    console.log("Background image loaded");
+
     const watermark = await loadImageFromUrl(watermarkUrl);
+    console.log("Watermark image loaded");
 
     const canvas = createCanvas(1080, 1080);
     const ctx = canvas.getContext('2d') as unknown as CanvasRenderingContext2D;
@@ -81,9 +89,12 @@ export const mergePunchlineAndBackground = async (
 
     ctx.drawImage(watermark as unknown as CanvasImageSource, watermarkX, watermarkY, watermarkWidth, watermarkHeight);
 
+    console.log("Image merged successfully");
+
     return canvas.toDataURL('image/png');
   } catch (error) {
     console.error('Error merging punchline and background:', error);
     throw error;
   }
 };
+
