@@ -9,7 +9,7 @@ if (!fs.existsSync(fontPath)) {
   process.exit(1);
 }
 
-//registerFont(fontPath, { family: 'HolyfatCustom' });
+registerFont(fontPath, { family: 'HolyfatCustom' });
 
 const loadImageFromUrl = async (url: string): Promise<any> => {
   try {
