@@ -1,10 +1,10 @@
 {
     "functions": {
       "pages/api/generate-background.ts": {
-        "maxDuration": 60
+        "maxDuration": 20
       },
       "pages/api/merge-punchline-background.ts": {
-        "maxDuration": 60
+        "maxDuration": 20
       }
     }
   }
