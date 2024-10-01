@@ -41,13 +41,13 @@ export const mergePunchlineAndBackground = async (
     const watermark = await loadImageFromUrl(watermarkUrl);
     console.log("Watermark image loaded");
 
-    const canvas = createCanvas(1080, 1080);
+    const canvas = createCanvas(512, 512);
     const ctx = canvas.getContext('2d') as unknown as CanvasRenderingContext2D;
 
-    ctx.drawImage(backgroundImage, 0, 0, 1080, 1080);
+    ctx.drawImage(backgroundImage, 0, 0, 512, 512);
 
     ctx.fillStyle = '#ffffff';
-    ctx.font = 'bold 80px HolyfatCustom';
+    ctx.font = 'bold 40px HolyfatCustom';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
