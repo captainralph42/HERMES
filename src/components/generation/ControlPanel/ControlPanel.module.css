@@ -13,7 +13,7 @@
 }
 
 .controlPanel > * {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,8 @@
 
 @media (max-width: 768px) {
   .controlPanel {
-    height: auto;
+    height: 45%;
+    min-width: 100%;
   }
 
   .generateButton {

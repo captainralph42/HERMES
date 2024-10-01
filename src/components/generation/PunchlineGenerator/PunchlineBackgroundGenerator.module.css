@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  height: 80vh;
+  min-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -13,10 +13,26 @@
 .layout {
   display: flex;
   gap: 40px;
-  align-items: stretch;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .nftDisplay, .controlPanel {
   flex: 1;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    min-height: 50em;
+
+  }
+  .layout {
+    gap: 20px;
+  }
+
+  .nftDisplay, .controlPanel {
+    width: 100%;
+  }
 }

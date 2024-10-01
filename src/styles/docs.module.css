@@ -1,4 +1,3 @@
-/* src/styles/docs.module.css */
 .docsContainer {
   font-family: 'Arial', sans-serif;
   color: #333;
@@ -18,4 +17,40 @@
 
 .docsContainer ul {
   color: #555;
+}
+
+@media (max-width: 768px) {
+  .docsContainer {
+    margin: 10px;
+  }
+
+  .docsContainer h1, .docsContainer h2 {
+    font-size: 24px;
+  }
+
+  .docsContainer p {
+    font-size: 14px; 
+  }
+
+  .docsContainer ul {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .docsContainer {
+    margin: 5px;
+  }
+
+  .docsContainer h1, .docsContainer h2 {
+    font-size: 20px;
+  }
+
+  .docsContainer p {
+    font-size: 12px;
+  }
+
+  .docsContainer ul {
+    font-size: 12px;
+  }
 }

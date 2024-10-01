@@ -54,3 +54,45 @@
 .navItem:hover {
   color: #6b9b7e;
 }
+
+@media (max-width: 768px) {
+  .headerBox {
+    position: absolute;
+    flex-direction: row;
+    height: auto;
+    padding: 5px;
+  }
+
+
+
+  .brandName {
+    font-size: 32px;
+    margin-left: 5px;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navItem {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerBox {
+    padding: 5px;
+  }
+
+  .brandName {
+    font-size: 32px;
+  }
+
+  .navItem {
+    font-size: 28px;
+  }
+}
