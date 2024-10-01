@@ -1,24 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import PunchlineBackgroundGenerator from '@/components/generation/PunchlineGenerator/PunchlineBackgroundGenerator';
-import Sidebar from '@/components/layout/Sidebar/Sidebar';
-import Title from '@/components/common/Title/Title'; 
-import Footer from '@/components/layout/Footer/Footer';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Hermes</title>
-      </Head>
-      <Sidebar />
+  const router = useRouter();
 
-      <main>
-        <Title />
-        <PunchlineBackgroundGenerator />
-      </main>
+  useEffect(() => {
+    router.push('/landing');
+  }, [router]);
 
-      <Footer />
-    </>
-  );
+  return null;
 }

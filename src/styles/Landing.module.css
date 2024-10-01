@@ -1,0 +1,78 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Holyfat', sans-serif;
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .title {
+    font-size: 7rem;
+    font-weight: 100;
+    color: #f1eeec;
+    margin: 0;
+  }
+  
+  .slogan {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-top: -50px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    z-index: 1;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  .accessButton {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #817872;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .accessButton:hover {
+    background-color: #005bb5;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 4rem;
+    }
+  
+    .slogan {
+      font-size: 1rem;
+    }
+  }
+  
