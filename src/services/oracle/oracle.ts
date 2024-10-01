@@ -5,7 +5,7 @@ const nodeProvider = new NodeProvider('https://node.testnet.alephium.org');
 web3.setCurrentNodeProvider(nodeProvider);
 
 export async function getPrices(): Promise<{ alphPrice: number | null, btcPrice: number | null }> {
-  const oracleAddress = process.env.NEXT_PUBLIC_ORACLE_ADDRESS || '';  // Récupérer depuis .env
+  const oracleAddress = process.env.NEXT_PUBLIC_ORACLE_ADDRESS || ''; 
 
   const priceFetcher = new PriceFetcherInstance(oracleAddress);
 
