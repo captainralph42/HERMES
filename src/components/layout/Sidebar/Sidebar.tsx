@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import CustomWalletConnectButton from '../../wallet/CustomWalletConnectButton/CustomWalletConnectButton';
 import styles from './Sidebar.module.css';
 
@@ -10,11 +11,10 @@ const Sidebar: React.FC = () => {
         <span className={styles.brandName}>Hermes</span>
       </div>
 
-      {/* Remplacer nav par div */}
       <div className={styles.nav}>
-        <a href="#docs" className={styles.navItem}>Docs</a>
-        <a href="#social" className={styles.navItem}>Social</a>
-        <a href="#github" className={styles.navItem}>Github</a>
+        <Link href="/docs" className={styles.navItem}>Docs</Link>
+        <a href="https://x.com/Hermes_alph" className={styles.navItem} target="_blank" rel="noopener noreferrer">Social</a>
+        <a href="https://github.com/captainralph42/HERMES" className={styles.navItem} target="_blank" rel="noopener noreferrer">Github</a>
       </div>
 
       <CustomWalletConnectButton />
