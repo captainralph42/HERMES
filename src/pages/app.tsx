@@ -4,6 +4,7 @@ import PunchlineBackgroundGenerator from '@/components/generation/PunchlineGener
 import Sidebar from '@/components/layout/Sidebar/Sidebar';
 import Title from '@/components/common/Title/Title'; 
 import Footer from '@/components/layout/Footer/Footer';
+import Popup from '@/components/Popup';
 
 export default function DApp() {
   return (
@@ -11,6 +12,10 @@ export default function DApp() {
       <Head>
         <title>Hermes</title>
       </Head>
+
+      {/* Ajout du popup */}
+      <Popup />
+
       <Sidebar />
 
       <main>
