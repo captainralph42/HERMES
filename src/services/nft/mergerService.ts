@@ -70,9 +70,9 @@ export const mergePunchlineAndBackground = async (
       return lines;
     };
 
-    const maxWidth = 1000;
+    const maxWidth = 500;
     const lines = wrapText(ctx, punchline, maxWidth);
-    const lineHeight = 80;
+    const lineHeight = 40;
     const textX = canvas.width / 2;
     const textY = canvas.height / 2 - (lines.length * lineHeight) / 2;
 
