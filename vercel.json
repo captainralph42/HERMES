@@ -1,9 +1,9 @@
 {
     "functions": {
-      "api/generate-background.ts": {
+      "pages/api/generate-background.ts": {
         "maxDuration": 60
       },
-      "api/merge-punchline-background.ts": {
+      "pages/api/merge-punchline-background.ts": {
         "maxDuration": 60
       }
     }
