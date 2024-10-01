@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hermesr</title>
+        <title>Hermes</title>
       </Head>
       <Sidebar />
 

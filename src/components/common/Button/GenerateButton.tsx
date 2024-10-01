@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useWallet } from '@alephium/web3-react'; // Importer useWallet
+import { useWallet } from '@alephium/web3-react'; 
 import styles from './GenerateButton.module.css';
 
 interface GenerateButtonProps {
@@ -20,10 +20,10 @@ const GenerateButton: React.FC<GenerateButtonProps> = ({ onClick, isLoading }) =
   return (
     <button
       onClick={onClick}
-      disabled={isLoading || !isConnected}
+      disabled={isLoading || !isConnected || !isMounted}
       className={styles.generateButton}
     >
-      {isLoading ? 'Minting...' : isMounted ? (isConnected ? 'Mint' : 'Connect Wallet to Mint') : 'Mint'}
+      {isLoading ? 'Minting...' : isMounted ? (isConnected ? 'Mint' : 'Connect Wallet') : 'Mint'}
     </button>
   );
 };

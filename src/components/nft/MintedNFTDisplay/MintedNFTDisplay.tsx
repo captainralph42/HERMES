@@ -19,7 +19,7 @@ const MintedNFTDisplay: React.FC<MintedNFTDisplayProps> = ({ nftImageUrl, isLoad
         nftImageUrl ? (
           <img src={nftImageUrl} alt="NFT" className={styles.nftImage} />
         ) : (
-          <p className={styles.placeholderText}>Connect your wallet to mint</p>
+          <p className={styles.placeholderText}>Mint !</p>
         )
       )}
     </div>
