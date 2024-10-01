@@ -1,0 +1,21 @@
+/* src/styles/docs.module.css */
+.docsContainer {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 20px;
+}
+
+.docsContainer h1, .docsContainer h2 {
+  color: #ff6347;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+.docsContainer p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.docsContainer ul {
+  color: #555;
+}
