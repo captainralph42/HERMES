@@ -13,7 +13,6 @@ export default function DApp() {
         <title>Hermes</title>
       </Head>
 
-      {/* Ajout du popup */}
       <Popup />
 
       <Sidebar />
