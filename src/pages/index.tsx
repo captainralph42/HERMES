@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Punchline Background Generator</title>
+        <title>Hermesr</title>
       </Head>
       <Sidebar />
 
