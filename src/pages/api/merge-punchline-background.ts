@@ -9,7 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ? `https://${process.env.VERCEL_URL}`
       : 'http://localhost:3000';
 
-    const watermarkUrl = `${baseUrl}/images/hermes_alephium_logo.png`;
+    const watermarkUrl = 'https://via.placeholder.com/200x200.png'; 
+
 
     try {
       const mergedImage = await mergePunchlineAndBackground(punchline, background, watermarkUrl);
