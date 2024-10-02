@@ -1,5 +1,5 @@
-const pinataApiKey = process.env.NEXT_PUBLIC_PINATA_API_KEY!;
-const pinataSecretApiKey = process.env.NEXT_PUBLIC_PINATA_SECRET_API_KEY!;
+const pinataApiKey = process.env.PINATA_API_KEY!;
+const pinataSecretApiKey = process.env.PINATA_SECRET_API_KEY!;
 
 export const uploadImageToPinata = async (file: File) => {
   const data = new FormData();
