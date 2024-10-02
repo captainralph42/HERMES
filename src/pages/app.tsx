@@ -23,6 +23,7 @@ export default function DApp() {
       </main>
 
       <Footer />
+
     </>
   );
 }
