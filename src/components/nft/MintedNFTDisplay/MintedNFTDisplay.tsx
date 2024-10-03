@@ -5,22 +5,25 @@ interface MintedNFTDisplayProps {
   nftImageUrl: string | null;
   isLoading: boolean;
   currentStep: string;
+  isAwaitingConfirmation: boolean;
 }
 
-const MintedNFTDisplay: React.FC<MintedNFTDisplayProps> = ({ nftImageUrl, isLoading, currentStep }) => {
+const MintedNFTDisplay: React.FC<MintedNFTDisplayProps> = ({
+  nftImageUrl,
+  isLoading,
+  currentStep,
+  isAwaitingConfirmation,
+}) => {
   return (
     <div className={styles.nftBox}>
-      {isLoading ? (
+      {currentStep ? (
         <div className={styles.loadingBox}>
           <p>{currentStep}</p>
-          <div className={styles.loader}></div>
         </div>
+      ) : nftImageUrl ? (
+        <img src={nftImageUrl} alt="NFT" className={styles.nftImage} />
       ) : (
-        nftImageUrl ? (
-          <img src={nftImageUrl} alt="NFT" className={styles.nftImage} />
-        ) : (
-          <p className={styles.placeholderText}>Mint !</p>
-        )
+        <p className={styles.placeholderText}>Mint your first NFT!</p>
       )}
     </div>
   );

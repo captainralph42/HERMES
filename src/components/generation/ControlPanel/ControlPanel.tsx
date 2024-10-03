@@ -13,7 +13,10 @@ interface ControlPanelProps {
   onSubtletyChange: (value: number) => void;
   onLengthChange: (value: number) => void;
   onGenerateClick: () => void;
+  isAwaitingConfirmation: boolean;
   isGenerating: boolean;
+  isLoading: boolean;
+  buttonText: string;
 }
 
 const ControlPanel: React.FC<ControlPanelProps> = ({
@@ -26,7 +29,10 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
   onSubtletyChange,
   onLengthChange,
   onGenerateClick,
+  isAwaitingConfirmation,
   isGenerating,
+  isLoading,
+  buttonText,
 }) => {
   return (
     <div className={styles.controlPanel}>
@@ -35,7 +41,12 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
       <SliderInput label="Subtlety" value={subtlety} onChange={onSubtletyChange} />
       <SliderInput label="Length" value={length} onChange={onLengthChange} />
       <div className={styles.buttonContainer}>
-        <GenerateButton onClick={onGenerateClick} isLoading={isGenerating} />
+        <GenerateButton
+          onClick={onGenerateClick}
+          isLoading={isLoading}
+          isGenerating={isGenerating}
+          buttonText={isAwaitingConfirmation ? 'Confirm' : buttonText}
+        />
       </div>
     </div>
   );
