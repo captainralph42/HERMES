@@ -4,14 +4,13 @@ import GenerateButton from '../../common/Button/GenerateButton';
 import styles from './ControlPanel.module.css';
 
 interface ControlPanelProps {
-  humor: number;
-  love: number;
-  subtlety: number;
-  length: number;
-  onHumorChange: (value: number) => void;
-  onLoveChange: (value: number) => void;
-  onSubtletyChange: (value: number) => void;
-  onLengthChange: (value: number) => void;
+  sliders: {
+    humor: number;
+    love: number;
+    subtlety: number;
+    length: number;
+  };
+  onSliderChange: (name: string, value: number) => void;
   onGenerateClick: () => void;
   isAwaitingConfirmation: boolean;
   isGenerating: boolean;
@@ -20,14 +19,8 @@ interface ControlPanelProps {
 }
 
 const ControlPanel: React.FC<ControlPanelProps> = ({
-  humor,
-  love,
-  subtlety,
-  length,
-  onHumorChange,
-  onLoveChange,
-  onSubtletyChange,
-  onLengthChange,
+  sliders,
+  onSliderChange,
   onGenerateClick,
   isAwaitingConfirmation,
   isGenerating,
@@ -36,10 +29,10 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
 }) => {
   return (
     <div className={styles.controlPanel}>
-      <SliderInput label="Humor" value={humor} onChange={onHumorChange} />
-      <SliderInput label="Love" value={love} onChange={onLoveChange} />
-      <SliderInput label="Subtlety" value={subtlety} onChange={onSubtletyChange} />
-      <SliderInput label="Length" value={length} onChange={onLengthChange} />
+      <SliderInput label="Humor" value={sliders.humor} onChange={(value) => onSliderChange('humor', value)} />
+      <SliderInput label="Love" value={sliders.love} onChange={(value) => onSliderChange('love', value)} />
+      <SliderInput label="Subtlety" value={sliders.subtlety} onChange={(value) => onSliderChange('subtlety', value)} />
+      <SliderInput label="Length" value={sliders.length} onChange={(value) => onSliderChange('length', value)} />
       <div className={styles.buttonContainer}>
         <GenerateButton
           onClick={onGenerateClick}

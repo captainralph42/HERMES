@@ -19,22 +19,27 @@ const GenerateButton: React.FC<GenerateButtonProps> = ({ onClick, isLoading, isG
 
   const isConnected = !!account;
 
+  if (!isMounted) {
+    return (
+      <button disabled className={styles.generateButton}>
+        Loading...
+      </button>
+    );
+  }
+
   return (
     <button
       onClick={onClick}
-      disabled={isLoading || !isConnected || !isMounted}
+      disabled={isLoading || !isConnected}
       className={styles.generateButton}
     >
-      {isLoading 
+      {isLoading
         ? 'Minting...'
-        : isGenerating 
-          ? 'Generating...'
-          : !isMounted 
-            ? 'Mint'
-            : !isConnected 
-              ? 'Connect Wallet'
-              : buttonText
-      }
+        : isGenerating
+        ? 'Generating...'
+        : !isConnected
+        ? 'Connect Wallet'
+        : buttonText}
     </button>
   );
 };

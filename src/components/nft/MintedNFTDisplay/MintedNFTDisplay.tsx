@@ -3,16 +3,12 @@ import styles from './MintedNFTDisplay.module.css';
 
 interface MintedNFTDisplayProps {
   nftImageUrl: string | null;
-  isLoading: boolean;
   currentStep: string;
-  isAwaitingConfirmation: boolean;
 }
 
 const MintedNFTDisplay: React.FC<MintedNFTDisplayProps> = ({
   nftImageUrl,
-  isLoading,
   currentStep,
-  isAwaitingConfirmation,
 }) => {
   return (
     <div className={styles.nftBox}>
