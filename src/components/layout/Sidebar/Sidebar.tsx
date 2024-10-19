@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
 
       <div className={styles.nav}>
         <Link href="/docs" className={styles.navItem}>Docs</Link>
-        <a href="https://x.com/Hermes_alph" className={styles.navItem} target="_blank" rel="noopener noreferrer">Social</a>
+        <a href="https://x.com/HermesOnChain" className={styles.navItem} target="_blank" rel="noopener noreferrer">Social</a>
         <a href="https://github.com/captainralph42/HERMES" className={styles.navItem} target="_blank" rel="noopener noreferrer">Github</a>
       </div>
 
